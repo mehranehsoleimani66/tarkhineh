@@ -2,7 +2,7 @@
 
 const Header=()=>{
     return(
-<div className="flex flex-row justify-between items-center w-full  ">
+<div className="flex flex-row justify-between items-center w-full bg-[#F9F9F9] ">
 <div className="flex flex-row mx-20  gap-2 ">
 <div className="bg-[#E5F2E9] rounded-lg p-1 text-[#417F56] cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -24,8 +24,8 @@ const Header=()=>{
 <div >
     <ul className="flex flex-row-reverse items-center justify-center gap-6  flex-grow-2 text-[#717171] ">
     <li className=" hover:text-[#417F56] hover:border-b-2 cursor-pointer border-b-[#417F56] ">صفحه اصلی </li>
-    <li className="flex flex-row gap-1 hover:text-[#417F56] cursor-pointer"><img className='w-4'src='./images/arrow-down.png'/><span className="hover:text-[#417F56] hover:border-b-2  border-b-[#417F56]">شعبه</span></li>
-   <li className="flex flex-row gap-1 hover:text-[#417F56] cursor-pointer"> <img  className='w-4' src='./images/arrow-down.png '/><span className="hover:text-[#417F56] hover:border-b-2 border-b-[#417F56]">منو</span> </li>
+    <li className="flex flex-row justify-center items-end  gap-1 hover:text-[#417F56] cursor-pointer"><img className='w-4'src='./images/arrow-down.png'/><span className="hover:text-[#417F56] hover:border-b-2  border-b-[#417F56]">شعبه</span></li>
+   <li className="flex  flex-row justify-center items-end  gap-1 hover:text-[#417F56] cursor-pointer"> <img  className='w-4' src='./images/arrow-down.png '/><span className="hover:text-[#417F56] hover:border-b-2 border-b-[#417F56]">منو</span> </li>
     <li className="hover:text-[#417F56] hover:border-b-[#417F56] hover:border-b-2 cursor-pointer ">اعطای نمایندگی</li>
     <li className="hover:text-[#417F56] hover:border-b-2 cursor-pointer border-b-[#417F56]">درباره ی ما</li>
     <li className="hover:text-[#417F56] hover:border-b-2 cursor-pointer border-b-[#417F56]"> ارتباط با ما </li>
