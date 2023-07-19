@@ -17,10 +17,7 @@ const [branchState,setBranchState]=useState([])
     useEffect(()=>{getBranchesData();}
     ,[])
     
-    // useEffect(()=>{
-    //   console.log(branchState,'branchState')
-    // })
-
+  
 
 return(
 
