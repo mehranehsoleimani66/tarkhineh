@@ -11,3 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:where(.css-dev-only-do-not-override-1m62vyb).ant-input:placeholder-shown{
+  color:rgb(151, 149, 149);
+}

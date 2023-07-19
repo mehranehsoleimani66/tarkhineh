@@ -1,20 +1,22 @@
 
 import './App.css';
-import Header from './component/header/header';
+import Footer from './component/Footer/Footer';
+import Header from './component/header/Header';
 import {Route, Routes} from 'react-router-dom';
-import Footer from './component/footer/footer';
+import Home from './pages/Home/home';
 function App() {
   return (
     <div className="App">
 
       <Header/>
       <Routes>
-     <Route index element={<h4>home</h4>} />
+     <Route index element={<Home/>} />
      <Route path='./profile' element={<h4>profile</h4>}/>
      <Route path='./*' element={<h4>not found</h4>}/>
     
       </Routes>
       <Footer/>
+      
     </div>
   );
 }
