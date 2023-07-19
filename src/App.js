@@ -3,7 +3,10 @@ import './App.css';
 import Footer from './component/Footer/Footer';
 import Header from './component/header/Header';
 import {Route, Routes} from 'react-router-dom';
-import Home from './pages/Home/home';
+import Home from './pages/Home';
+
+
+
 function App() {
   return (
     <div className="App">
