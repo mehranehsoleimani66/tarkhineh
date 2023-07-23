@@ -1,12 +1,13 @@
+import CardItem from './CartItem';
 import axios from 'axios';
-import CardItem  from './CartItem'
 import { useEffect,useState } from 'react';
+
 
 const Branches =()=>{
 const [branchState,setBranchState]=useState([])
  const getBranchesData =async()=>{
  
-    const response = await axios.get('https://90f24d9c-4271-42b4-a7e4-9fc8d26cbc4f.mock.pstmn.io/branches')
+    const response = await axios.get('https://f8c36224-169f-44a4-9908-74bc77bb153c.mock.pstmn.io/branches')
     const {data} = response
     setBranchState(data)
     
@@ -24,7 +25,7 @@ return(
   <>
   <div className='flex flex-col justify-center items-center w-full p-10'>
    <div className='p-5'><h4>شعبه های ترخینه</h4></div>
-   <div className='flex flex-row justify-center items-center gap-2'>
+   <div className='flex flex-row justify-center items-start gap-2'>
    
  {
   
