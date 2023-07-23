@@ -7,6 +7,7 @@ const CardItem =({title,description})=>{
        hoverable
        style={{
          width: 240,
+         minHeight:450,
        }}
        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
      >
