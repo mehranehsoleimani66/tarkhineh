@@ -41,3 +41,16 @@
   color: #959090;
   opacity: 1;
 }
+.ant-carousel .slick-dots li button{
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  
+}
+.ant-carousel .slick-dots li{
+  margin-inline: 5px;
+
+}
+.ant-carousel .slick-dots li.slick-active{
+  width: 15px;
+}
