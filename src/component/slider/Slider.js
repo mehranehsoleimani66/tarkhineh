@@ -1,16 +1,17 @@
 import {Button, Carousel} from 'antd';
 
+
 const Slider = () => {
     
-       
+   
     return ( 
         
-          <Carousel arrow prevArrow={<div className='text-white '>kskskks</div>} nextArrow={<div>sksksks</div>} >
+      <Carousel autoplay>
             <div className='relative' >
               <img style={{width:'100%'}} src='./images/slider.png'/>
               <h4 style={{fontSize:'20px', position:'absolute', top:'45%', left:'39%',color:'white',margin:'auto'}}>تجربه غذای سالم و گیاهی به سبک ترخینه</h4>
                <Button style={{ position:'absolute', bottom:'25%', left:'46%',backgroundColor:'green',margin:'auto',color:'white'}}>سفارش آنلاین غذا</Button>
-           <div style={{}}></div>
+
             </div>
             <div className='relative'>
             <img style={{width:'100%'}} src='./images/slider2.png'/>
