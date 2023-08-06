@@ -1,5 +1,11 @@
 import Forms from "./Form/Forms";
 const Footer=()=>{
+    // const navigate = useNavigate();
+
+    // const navigateToBlogsHandler = () => { 
+    //     navigate('/blogs')
+    // }
+
     return(
         <div  className='flex flex-row  bottom-0 left-0 w-full text-white' style={{backgroundImage:`url(${'./images/Footerbg.png'})`}}>
            <div className='flex flex-row-reverse  justify-between items-start w-full'>
@@ -17,7 +23,7 @@ const Footer=()=>{
            <div className="  flex flex-col  items-center justify-center p-10 gap-3  w-1/4">
          
            <h4 className="font-bold ">شعبه‌های ترخینه</h4>
-            <h1 className="cursor-pointer font-thin">شعبه اکباتان</h1>
+            <h1  className="cursor-pointer font-thin">شعبه اکباتان</h1>
            <h1 className="cursor-pointer font-thin">شعبه چالوس</h1>
            <h1 className="cursor-pointer font-thin">شعبه اقدسیه</h1>
            </div>
