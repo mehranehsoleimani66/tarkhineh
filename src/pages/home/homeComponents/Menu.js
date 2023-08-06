@@ -1,11 +1,12 @@
-import MenuList from "./MenuList";
+
+import MenuList from "../homeComponents/MenuList";
 import { useEffect,useState } from 'react';
 import axios from "axios";
 const Menu =()=>{
   const [menuState,setMenuState]=useState([])
  const getMenuList =async()=>{
  
-    const response = await axios.get('https://f8c36224-169f-44a4-9908-74bc77bb153c.mock.pstmn.io/menugroup')
+    const response = await axios.get('https://8d75c6cb-beb8-4542-bdbd-2b39ebbb89f7.mock.pstmn.io/menugroup')
     const {data} = response
     setMenuState(data)
     console.log(data,'dataaa')
@@ -23,9 +24,11 @@ const Menu =()=>{
          {
   menuState.data?.map((item)=>
   
-  <MenuList id={item?.id} title={item?.title}/>
-  )
-         }
+   <MenuList id={item?.id} title={item?.title} link={item?.link}/>
+
+
+  
+  )  }
  
 
    

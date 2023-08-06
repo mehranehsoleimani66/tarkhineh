@@ -1,4 +1,4 @@
-import { Card } from 'antd';
+import { Button, Card } from 'antd';
 const CardItem =({title,description})=>{
   const { Meta } = Card;
   return(
@@ -11,7 +11,8 @@ const CardItem =({title,description})=>{
        }}
        cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
      >
-       <Meta title={title} description={description} />
+       <Meta title={title} description={description}/>
+      
      </Card>
 
 
