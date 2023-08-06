@@ -5,7 +5,7 @@ import Navbar from "./Navbar"
 
 const Header=()=>{
     return(
-            <div className=" w-full flex flex-row justify-between items-center  bg-gray-primary ">
+            <div className=" w-full flex flex-row justify-between items-center  bg-gray-primary h-24">
             
 <Navbar/>
 {/*            
