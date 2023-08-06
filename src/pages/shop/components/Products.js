@@ -7,7 +7,7 @@ const Products = (props) => {
     return ( 
         
                  <div className=' flex-col justify-center  items-center m-5 border border-gray-400 rounded-md shadow-xl hover:-translate-y-2 transition-all' style={{boxShadow:"0.5rem 0.75rem 1.5rem #bbbbbb",background:'var --color-gray-primary'}}>
-                    <img src='./images/foodd.png' className='productImage'/>
+                    <img src='./images/food2.png' className='productImage'/>
                     <div className='flex flex-col gap-2 justify-between items-center'>
                     <h3 className='pt-3 text-xl'>{props.title}</h3>
 
