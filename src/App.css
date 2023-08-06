@@ -46,10 +46,12 @@
   height: 15px;
   border-radius: 100%;
   
+  
 }
 .ant-carousel .slick-dots li{
   margin-inline: 5px;
-
+  margin-bottom: 10px;
+  
 }
 .ant-carousel .slick-dots li.slick-active{
   width: 15px;

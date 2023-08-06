@@ -1,24 +1,29 @@
-
+import React from 'react';
 import './App.css';
 import Footer from './component/Footer/Footer';
 import Header from './component/header/Header';
+import Slider from './component/slider/Slider';
+import Home from './pages/home/Home';
 import {Route, Routes} from 'react-router-dom';
-import Home from './pages/Home';
+import Shop from './pages/shop/Shop';
 
 
 
 function App() {
   return (
     <div className="App">
-
+<React.StrictMode>
       <Header/>
+      <Slider/>
       <Routes>
+      
      <Route index element={<Home/>} />
-     <Route path='./profile' element={<h4>profile</h4>}/>
-     <Route path='./*' element={<h4>not found</h4>}/>
+     <Route path='/Shop' element={<Shop/>}/>
+     
     
       </Routes>
       <Footer/>
+      </React.StrictMode>
       
     </div>
   );
