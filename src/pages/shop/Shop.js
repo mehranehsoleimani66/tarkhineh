@@ -18,9 +18,9 @@ const Shop = () => {
      ,[])
      
     return (
-      <div className='flex flex-col justify-center items-end  text-xl '>
-        <h4 className='mt-9 pr-9' >پیشنهاد ویزه</h4>
-     <div className='flex flex-row w-2/4 md:w-full justify-center items-center '>
+      <div className='flex flex-col justify-between items-center  text-2xl'>
+        <h4 className='mt-9' >پیشنهاد ویزه</h4>
+     <div className='flex flex-row w-full justify-center items-center '>
      
       {productState?.data?.map((item)=>(
        <Products
