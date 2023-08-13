@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Mitra';
+    src: local('Lato'), url(./fonts/Mitra.ttf) format('opentype');
+  }
+  
+  @font-face {
+      font-family: 'Mj flow';
+      font-weight: 900;
+      src: local('Lato'), url(./fonts/Mj\ flow.ttf) format('opentype');
+  }
+  
