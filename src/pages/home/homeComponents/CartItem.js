@@ -1,15 +1,15 @@
 import { Button, Card } from 'antd';
-const CardItem =({title,description})=>{
+const CardItem =({title,description,cartImg})=>{
   const { Meta } = Card;
   return(
     
-    <Card
+    <Card className='justify-between pb-0 '
        hoverable
        style={{
          width: 240,
-         minHeight:450,
+         minHeight:350,
        }}
-       cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+       cover={<img alt="example" src={cartImg} />}
      >
        <Meta title={title} description={description}/>
       
