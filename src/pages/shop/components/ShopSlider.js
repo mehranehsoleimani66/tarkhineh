@@ -1,5 +1,5 @@
 
-import Foods from './Foods'
+import Foods from './Foods';
 import axios from 'axios';
 import { useEffect,useState } from 'react';
 import Slider from 'react-slick';
@@ -9,10 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 const ShopSlider = () => {
    const settings = {
       dots: true,
-      infinite: false,
+      infinite: true,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      
       responsive: [
          {
            breakpoint: 1024,
@@ -37,9 +38,7 @@ const ShopSlider = () => {
              slidesToScroll: 1
            }
          }
-         // You can unslick at a given breakpoint now by adding:
-         // settings: "unslick"
-         // instead of a settings object
+         
        ]
     };
 
@@ -60,8 +59,9 @@ const ShopSlider = () => {
 
       <div className='flex flex-col justify-between items-center  text-2xl w-full'>
         <h4 className='mt-9' >پیشنهاد ویزه</h4>
-        <div className='flex flex-row w-full'>
-        <Slider {...settings}>
+        {/* <div className='flex flex-row w-full'> */}
+        <div style={{paddingBottom:'30px' }}>
+        <Slider {...settings} style={{width:'1024px'}}>
          {productState?.data?.map((item)=>(
             <Foods
             key={item.id}
@@ -69,29 +69,18 @@ const ShopSlider = () => {
             price={item?.price}
             starCount={item?.starCount}
             scoreCount={item?.scoreCount}
-            hasDisCount={false}
+            hasDiscount={item?.hasDiscount}
             discountedPrice={item?.discountedPrice}
             discountedPercent={item?.discountedPercent}
             foodImage={`/images/foods/${item?.id}.png`}
             /> 
 
-      ) )   
-}
-</Slider>
-</div>
-      
-    
-
-    
-
-    
-     
-     </div> 
+      ) )} 
+</Slider></div>
+{/* </div> */}
+</div> 
    
-    )
-    
- 
-}
+    )}
  
 export default ShopSlider;
 
