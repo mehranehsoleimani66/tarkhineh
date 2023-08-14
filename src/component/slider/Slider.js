@@ -6,7 +6,7 @@ const Slider = () => {
    
     return ( 
         
-      <Carousel autoplay>
+      <Carousel autoplay dots={false}>
             <div className='relative' >
               <img style={{width:'100%'}} src='./images/slider.png'/>
               <h4 style={{fontSize:'20px', position:'absolute', top:'45%', left:'39%',color:'white',margin:'auto'}}>تجربه غذای سالم و گیاهی به سبک ترخینه</h4>
