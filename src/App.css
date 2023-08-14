@@ -56,3 +56,6 @@
 .ant-carousel .slick-dots li.slick-active{
   width: 15px;
 }
+ .ant-card-cover{
+  justify-content: space-between;
+ }
