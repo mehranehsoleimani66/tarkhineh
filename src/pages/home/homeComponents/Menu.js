@@ -19,12 +19,14 @@ const Menu =()=>{
     return(
        <div className="flex flex-col justify-right items-center w-full h-80  bg-white">
          <div className="pt-4 pb-1 font-bold text-lg"><p>منوی رستوران</p> </div>
-         <div className="flex flex-row justify-center pb-5 w-3/4 items-center">
+         <div className="flex flex-row-reverse justify-center pb-5 w-3/4 items-center">
   
          {
   menuState.data?.map((item)=>
   
-   <MenuList id={item?.id} title={item?.title} link={item?.link}/>
+   <MenuList id={item?.id} title={item?.title} link={item?.link} 
+   menuImg={`/images/menuImg/${item?.id}.png`}
+   />
 
 
   
