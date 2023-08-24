@@ -1,10 +1,13 @@
 
 import Foods from './Foods';
 import axios from 'axios';
-import { useEffect,useState } from 'react';
+import { useEffect,useState ,useContext} from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { message } from 'antd';
+import { cartContext } from '../../../App';
+
 
 const ShopSlider = () => {
    const settings = {
@@ -43,9 +46,11 @@ const ShopSlider = () => {
     };
 
   const [productState,setProductState]=useState([])
+  // const [cardFood,setCardFood]=useState([])
+  const cardFood = useContext(cartContext)
   const getProductData =async()=>{
   
-     const response = await axios.get('https://8d75c6cb-beb8-4542-bdbd-2b39ebbb89f7.mock.pstmn.io/products')
+     const response = await axios.get('https://e7e4453b-cf6b-4963-a2b5-69cf9a9a9ffb.mock.pstmn.io/products')
      const {data} = response
      setProductState(data)
      
@@ -53,6 +58,29 @@ const ShopSlider = () => {
   
      useEffect(()=>{getProductData();}
      ,[])
+
+
+    const buyFoodHandler=(newFood)=>{
+
+       //first food
+      if (cardFood?.cardFood == undefined || cardFood?.cardFood.length==0){
+
+
+        cardFood.buyFoodHandler([newFood])
+      }
+
+      //second or more foods without repeatiation
+      else{
+        const duplicate= cardFood?.cardFood.map((itm)=>{
+          return itm.id == newFood.id ? true :false
+        })
+        if (duplicate.includes(true)){
+          message.warning('غذا تکراری است.')
+        }
+        else{
+          cardFood.buyFoodHandler([...cardFood.cardFood,newFood])
+        }
+      }}
      
     return (
       
@@ -61,7 +89,7 @@ const ShopSlider = () => {
         <h4 className='mt-9' >پیشنهاد ویزه</h4>
         {/* <div className='flex flex-row w-full'> */}
         <div style={{paddingBottom:'30px' }}>
-        <Slider {...settings} style={{width:'1024px'}}>
+        <Slider {...settings} style={{width:'1024px'}} className='shadow-none'>
          {productState?.data?.map((item)=>(
             <Foods
             key={item.id}
@@ -73,6 +101,7 @@ const ShopSlider = () => {
             discountedPrice={item?.discountedPrice}
             discountedPercent={item?.discountedPercent}
             foodImage={`/images/foods/${item?.id}.png`}
+            buyFoodHandler={()=>buyFoodHandler(item)}
             /> 
 
       ) )} 

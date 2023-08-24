@@ -2,10 +2,11 @@ import ShopSlider from "./components/ShopSlider";
 
 const Shop = () => {
    return ( 
+      <>
+     <div> <ShopSlider/></div>
       
-     <ShopSlider/>
-      
-      
+    <div className="bg-[#315F41]"> <ShopSlider/></div>
+     </>
     );
 }
  

@@ -1,7 +1,7 @@
 import { Badge, Button} from 'antd';
 import { FaStar,HeartOutlined} from 'react-icons/fa';
 
-const Foods = ({title,foodImage,starCount,scoreCount,hasDiscount,discountedPercent,discountedPrice,price}) => {
+const Foods = ({title,foodImage,starCount,scoreCount,hasDiscount,discountedPercent,discountedPrice,price,buyFoodHandler}) => {
     return ( 
         
                  <div className=' flex-col justify-center  items-center m-5 border border-gray-400 rounded-md shadow-xl' style={{boxShadow:"0.5rem 0.75rem 1.5rem #bbbbbb",background:'var --color-gray-primary'}}>
@@ -39,7 +39,7 @@ const Foods = ({title,foodImage,starCount,scoreCount,hasDiscount,discountedPerce
                    
                     </div>
                     </div>
-                    <Button style={{background:'green',lineHeight:'20px' ,textAlign:'center', color:"white", margin:'15px' , width:"256px"}}>
+                    <Button onClick={buyFoodHandler} style={{background:'green',lineHeight:'20px' ,textAlign:'center', color:"white", margin:'15px' , width:"256px"}}>
                         افزودن به سبد خرید
                      </Button>
                     </div>
