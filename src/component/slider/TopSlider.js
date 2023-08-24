@@ -1,9 +1,7 @@
 import {Button, Carousel} from 'antd';
 
-
-const Slider = () => {
+const TopSlider = () => {
     
-   
     return ( 
         
       <Carousel autoplay dots={false}>
@@ -29,4 +27,4 @@ const Slider = () => {
      );
 }
  
-export default Slider;
+export default TopSlider;
