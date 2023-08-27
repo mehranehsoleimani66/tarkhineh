@@ -1,4 +1,5 @@
-import TopSlider from './component/slider/TopSlider';
+
+import TopSlider from '../../component/slider/TopSlider';
 import ShopSlider from "./components/ShopSlider";
 
 const Shop = () => {
