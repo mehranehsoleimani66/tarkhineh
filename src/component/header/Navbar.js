@@ -10,8 +10,8 @@ const Navbar = () => {
     <div className="Navbar">
     <Icons/>
     <div className="nav-items">
-        <a href="/home">صفحه اصلی</a>
-        <a href="/menu">منو</a>
+        <a href="/">صفحه اصلی</a>
+        <a href="/Shop">فروشگاه</a>
         <a href="/branches">شعبه </a>
         <a href="/agency">اعطای نمایندگی</a>
         <a href="/aboutUs">درباره ی ما</a>

@@ -8,7 +8,7 @@ const Header=()=>{
  
 
     return(
-            <div className=" w-full flex flex-row justify-between items-center  bg-gray-primary h-24">
+            <div className=" w-full flex flex-row justify-between items-center border-b-2 shadow-slate-300  bg-gray-primary h-24">
             
 <Navbar/>
 {/*            
