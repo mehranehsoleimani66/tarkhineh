@@ -5,7 +5,7 @@ const Foods = ({title,foodImage,starCount,scoreCount,hasDiscount,discountedPerce
     return ( 
         
                  <div className=' flex-col justify-center  items-center m-5 border border-gray-400 rounded-md shadow-xl' style={{boxShadow:"0.5rem 0.75rem 1.5rem #bbbbbb",background:'var --color-gray-primary'}}>
-                    <img src={foodImage} className='productImage' alt='foodimage'/>
+                    <div className='w-full'><img src={foodImage}  alt='foodimage'/></div>
                     <div className='flex flex-col gap-2 justify-between items-center'>
                     <h3 className='pt-3 text-xl'>{title}</h3>
 
