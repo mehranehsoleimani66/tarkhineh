@@ -7,7 +7,8 @@ import Home from './pages/home/Home';
 import {Route, Routes} from 'react-router-dom';
 import Shop from './pages/shop/Shop';
 import { createContext,useEffect,useState } from 'react';
-import CardPage from './pages/CardPage';
+import CardPage from './pages/cart/CardPage';
+import CardList from './pages/cart/CardList';
 
 
 
@@ -47,7 +48,7 @@ function App() {
      <Route index element={<Home/>} />
      <Route path='/Shop' element={<Shop />}/>
      <Route path='/Card' element={<CardPage />}/>
-    
+     <Route path='/Cardlist' element={<CardList />}/>
       </Routes>
       <Footer/>
   </cartContext.Provider>
