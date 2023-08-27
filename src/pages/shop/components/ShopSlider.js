@@ -11,11 +11,13 @@ import { cartContext } from '../../../App';
 
 const ShopSlider = () => {
    const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,
+      fade :false,
+    
       
       responsive: [
          {
@@ -24,7 +26,8 @@ const ShopSlider = () => {
              slidesToShow: 3,
              slidesToScroll: 3,
              infinite: true,
-             dots: true
+             dots: false,
+             fade:false
            }
          },
          {
