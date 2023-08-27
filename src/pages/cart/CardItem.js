@@ -1,10 +1,6 @@
 
-
 import { Badge} from 'antd';
-import { useState } from 'react';
-import { FaStar} from 'react-icons/fa';
-
-
+import RateComponent from './RateComponent'
 
 const CardItem =({title,foodImage,starCount,price,discountedPercent,discountedPrice,hasDiscount}) => {
    
@@ -18,13 +14,7 @@ const CardItem =({title,foodImage,starCount,price,discountedPercent,discountedPr
         <h4 className='text-lg text-right'>{title}</h4>
         <span>استا، قارچ، گوجه، کدوی خوردشده، پیاز خلالی‌شده</span>
         <div className='flex flex-row justify-center items-center'>
-             { [starCount].map(()=>{
-          return (
-            <FaStar className='fill-orange-400 '></FaStar>
-          )
-         
-        })
-    }
+       <RateComponent starCount={starCount}/>
        </div>
     </div>
     <div className='flex flex-col justify-between  gap-2 items-center'>
