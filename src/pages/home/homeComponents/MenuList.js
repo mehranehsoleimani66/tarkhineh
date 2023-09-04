@@ -1,7 +1,4 @@
 
-
-
-
 const MenuList =({title,link,menuImg})=>{
     return(
         <>
