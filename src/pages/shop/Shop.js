@@ -6,7 +6,7 @@ const Shop = () => {
    return ( 
       <>
       <div><TopSlider/></div>
-     <div> <ShopSlider/></div>
+     <div> <ShopSlider /></div>
       
     <div className="bg-[#315F41]"> <ShopSlider/></div>
      </>
