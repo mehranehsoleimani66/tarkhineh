@@ -9,6 +9,7 @@ import Shop from './pages/shop/Shop';
 import { createContext,useEffect,useState } from 'react';
 import CardPage from './pages/cart/CardPage';
 import CardList from './pages/cart/CardList';
+import Profile from './pages/Profile';
 
 
 
@@ -21,14 +22,15 @@ function App() {
     if (prevCartArr){
       setCardFood(prevCartArr)
     }
-    else{
+    else {
       setCardFood([])
     }
-   }
+    
+  }
    ,[])
    // set the second or more foods
    useEffect(()=>{
-     if (cardFood!==undefined && cardFood.length>0){
+     if (cardFood!==undefined){
       localStorage.setItem('cart',JSON.stringify(cardFood))
      }
    },[cardFood])
@@ -49,6 +51,7 @@ function App() {
      <Route path='/Shop' element={<Shop />}/>
      <Route path='/Card' element={<CardPage />}/>
      <Route path='/Cardlist' element={<CardList />}/>
+     <Route path='/profile' element={<Profile />}/>
       </Routes>
       <Footer/>
   </cartContext.Provider>
