@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './Navbar.css';
 import Logo from './Logo';
 import Icons from './Icons';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [isOpen,setIsOpen]=useState(false);
     return ( 
@@ -10,12 +11,12 @@ const Navbar = () => {
     <div className="Navbar">
     <Icons/>
     <div className="nav-items">
-        <a href="/">صفحه اصلی</a>
-        <a href="/Shop">فروشگاه</a>
-        <a href="/branches">شعبه </a>
-        <a href="/agency">اعطای نمایندگی</a>
-        <a href="/aboutUs">درباره ی ما</a>
-        <a href="contactUs"> ارتباط با ما</a>
+        <Link to="/">صفحه اصلی</Link>
+        <Link to="/Shop">فروشگاه</Link>
+        <Link to="/branches">شعبه </Link>
+        <Link to="/agency">اعطای نمایندگی</Link>
+        <Link to="/aboutUs">درباره ی ما</Link>
+        <Link to="contactUs"> ارتباط با ما</Link>
     </div>
     <Logo/>
     <div className={`nav-toggle ${isOpen && "open"}`} onClick={()=>setIsOpen(!isOpen)}

@@ -1,19 +1,26 @@
 import { useContext } from "react";
 import { cartContext } from "../../App";
+import { Link } from "react-router-dom";
 
 const TotalCart = () => {
-    const myCartCount = useContext(cartContext)
+    const myCartList = useContext(cartContext)
    
-  console.log (myCartCount.cardFood) 
-let prices =  myCartCount.cardFood.reduce((amount,item)=> item.price + amount,0)
-let disCounts = myCartCount.cardFood.reduce((amount,item)=> item.discountedPrice + amount,0)
+  console.log (myCartList.cardFood) 
+let prices =  myCartList.cardFood.reduce((amount,item)=> item.price + amount,0)
+let disCounts = myCartList.cardFood.reduce((amount,item)=> item.discountedPrice + amount,0)
+
+
+const deleteAllProduct=()=>{
+    myCartList.buyFoodHandler([])
+}
+
     return ( 
 <>
 <div className="flex flex-col  justify-between  items-center" >
   
 <div className="flex flex-row  w-full justify-between border border-b-2 p-2 items-center" >
-<span> <img src='./images/trash.png'/></span>
-<span >سبد خرید  ({myCartCount.cardFood.length})</span>    
+<div onClick={deleteAllProduct}> <img src='./images/trash.png'/></div>
+<span >سبد خرید  ({myCartList.cardFood.length})</span>    
 </div>
 <div className="flex flex-row-reverse w-full justify-between  border border-b-2 p-2  items-center">
 <span>تخفیف محصولات</span>

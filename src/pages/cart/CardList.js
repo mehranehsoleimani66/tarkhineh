@@ -14,7 +14,7 @@ const CardList = () => {
      
 //برای حذف از سبد خرید
 
-   const deletFoodHandler=(id)=>{
+   const deleteFoodHandler=(id)=>{
     console.log(id);
     const prevCart = cardFood;
     const foodIndex = prevCart.findIndex((item)=>item.id==id);
@@ -29,7 +29,7 @@ const CardList = () => {
 <>
 
 <div >
-{myCartList?.cardFood.length == 0 ? (<CardPage/>) : (
+{myCartList?.cardFood.length === 0 ? (<CardPage/>) : (
     <div className="flex flex-row justify-around mt-36 gap-4 items-start mb-12">
 <div className="w-1/4  border ml-20 mr-12 border-gray-800 rounded-md"><TotalCart/></div>
 <div className=" w-3/4 h-96 border mr-20 mb-10 gap-4 border-gray-500 rounded-md overflow-y-scroll ">
@@ -45,7 +45,7 @@ const CardList = () => {
             discountedPrice={item?.discountedPrice}
             discountedPercent={item?.discountedPercent}
             foodImage={`/images/foods/${item?.id}.png`}
-            deletFoodHandler={()=>{deletFoodHandler(item.id)}}
+            deleteFoodHandler={()=>{deleteFoodHandler(item.id)}}
             /> 
 
       ) )} 

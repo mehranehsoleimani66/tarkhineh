@@ -2,7 +2,7 @@
 import { Badge, Button} from 'antd';
 import RateComponent from './RateComponent'
 
-const CardItem =({title,foodImage,starCount,price,discountedPercent,discountedPrice,hasDiscount,deletFoodHandler}) => {
+const CardItem =({title,foodImage,starCount,price,discountedPercent,discountedPrice,hasDiscount,deleteFoodHandler}) => {
    
             return ( 
     
@@ -17,7 +17,7 @@ const CardItem =({title,foodImage,starCount,price,discountedPercent,discountedPr
        </div>
     </div>
     <div className='flex flex-col justify-between  gap-2 items-center'>
-        <Button onClick={deletFoodHandler}><img src='./images/trash.png'/></Button>
+        <Button onClick={deleteFoodHandler}><img src='./images/trash.png'/></Button>
         <div style={{visibility:hasDiscount?'visible':'hidden'}}  className='flex flex-row-reverse justify-between gap-2'>
        <span className=' line-through text-gray-400 text-sm pl-1'>{discountedPrice}</span> 
         <Badge count={`${discountedPercent}%`} ></Badge>
