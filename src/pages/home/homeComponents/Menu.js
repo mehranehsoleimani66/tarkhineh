@@ -6,7 +6,7 @@ const Menu =()=>{
   const [menuState,setMenuState]=useState([])
  const getMenuList =async()=>{
  
-    const response = await axios.get('https://e7e4453b-cf6b-4963-a2b5-69cf9a9a9ffb.mock.pstmn.io/menugroup')
+    const response = await axios.get('https://27c52ff4-053e-4612-a436-399663ad1950.mock.pstmn.io/menugroup')
     const {data} = response
     setMenuState(data)
     console.log(data,'dataaa')

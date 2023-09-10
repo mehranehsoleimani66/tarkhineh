@@ -1,12 +1,15 @@
-import React from 'react';
-
-const Profile = () => (
+import React, { useContext } from 'react';
+import { userContext } from "../../App";
+const Profile = () => {
+   const myUserContext = useContext(userContext)
+   return(
+  
  <div  className='w-[300px] m-auto mt-20 mb-20 border border-black h-auto'>
  <div className='flex flex-row-reverse justify-start items-center p-3' >
     <img src='images/Ellipse.png' alt='profile image' />
     <div className='flex flex-col justify-start items-center pr-3'>
-    <p className='text-lg'>کاربر ترخینه</p>
-    <p className='text-sm text-slate-400'>09115683401</p>
+    <p className='text-lg'> {myUserContext.user.name}</p>
+    <p className='text-sm text-slate-400'>{myUserContext.user.name}</p>
     </div>
     </div>
     <div className='w-[260px] border border-b-2 m-auto'></div>
@@ -30,6 +33,7 @@ const Profile = () => (
     </div>
  </div>
  </div>
-);
+ );
+}
 
 export default Profile;
