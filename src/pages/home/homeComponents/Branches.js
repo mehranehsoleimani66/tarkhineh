@@ -7,7 +7,7 @@ const Branches =()=>{
 const [branchState,setBranchState]=useState([])
  const getBranchesData =async()=>{
  
-    const response = await axios.get('https://27c52ff4-053e-4612-a436-399663ad1950.mock.pstmn.io/branches')
+    const response = await axios.get('https://8ebb1f5c-f534-4420-af16-9b421a69871b.mock.pstmn.io/branches')
     const {data} = response
     setBranchState(data)
     

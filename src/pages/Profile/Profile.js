@@ -1,15 +1,21 @@
 import React, { useContext } from 'react';
-import { userContext } from "../../App";
+import { cartContext, userContext } from "../../App";
+
+
 const Profile = () => {
-   const myUserContext = useContext(userContext)
+   const myUserContext = useContext(userContext);
+   const myCartList = useContext(cartContext);
+   
    return(
   
  <div  className='w-[300px] m-auto mt-20 mb-20 border border-black h-auto'>
  <div className='flex flex-row-reverse justify-start items-center p-3' >
     <img src='images/Ellipse.png' alt='profile image' />
     <div className='flex flex-col justify-start items-center pr-3'>
-    <p className='text-lg'> {myUserContext.user.name}</p>
-    <p className='text-sm text-slate-400'>{myUserContext.user.name}</p>
+   <p className='text-lg'> {myUserContext.user.name}<span className='pr-2'>{myUserContext.user.family}</span></p>
+
+    
+    <p className='text-sm text-slate-400'>{myUserContext.user.phone}</p>
     </div>
     </div>
     <div className='w-[260px] border border-b-2 m-auto'></div>
@@ -21,11 +27,11 @@ const Profile = () => {
     </div> 
  <div className='flex flex-row-reverse justify-end items-center gap-2'>
     <img src='images/Wallet-2.png' className='rounded-full' alt='profile image' /> 
-    <p> سفارشات</p> 
+    <p><span >سفارشات   ({myCartList.cardFood.length})</span>  </p> 
     </div>
     <div className='flex flex-row-reverse justify-end items-center gap-2'>
     <img src='images/Wallet-2.png' className='rounded-full' alt='profile image' /> 
-    <p> فروشگاه</p>  
+    <a href="/shop"> فروشگاه</a>  
     </div>
     <div className='flex flex-row-reverse justify-end items-center gap-2'>
     <img src='images/Logout.png' className='rounded-full' alt='profile image' />  
