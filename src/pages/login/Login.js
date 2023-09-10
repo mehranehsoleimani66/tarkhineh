@@ -4,11 +4,13 @@ import Step2 from "./components/Step2";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
  import { userContext } from "../../App";
+import {  useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [step , setStep] = useState(1)
     const [userPhoneNumber,setUserPhoneNumber] = useState()
     const [optCode,SetOptCode]= useState([])
+    const navigate = useNavigate()
 
 const myUserContext = useContext(userContext)
      useEffect(()=>{
@@ -32,6 +34,7 @@ code:optCode,
 }).then(({data})=>{
     console.log(data,'data from post')
     myUserContext.setUserHandler(data?.data)
+    navigate("/profile")
 }).catch((err)=>{
    console.log(err)
 })
@@ -39,7 +42,7 @@ code:optCode,
 }
 
     return ( 
-     <Modal open={false} footer={null}> 
+     <Modal open={true} footer={null}> 
        
         {step===1 ?<Step1 phone={userPhoneNumber} setPhone={(e)=>setUserPhoneNumber(e)} setStep={()=>setStep(2)} SetOptCode={e=>setOptHandler(e)} />:
         <Step2 

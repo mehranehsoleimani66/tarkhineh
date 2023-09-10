@@ -10,7 +10,7 @@ import { createContext,useEffect,useState } from 'react';
 import CardPage from './pages/cart/CardPage';
 import CardList from './pages/cart/CardList';
 import Login from './pages/login/Login';
-//import Profile from './pages/Profile';
+import Profile from './pages/Profile/Profile';
 
 export const cartContext = createContext()
 export const userContext = createContext()
@@ -83,14 +83,13 @@ useEffect(()=>{
   <cartContext.Provider value={{cardFood,buyFoodHandler}}>
   <userContext.Provider value={{user,setUserHandler}}>
       <Header/>
-      
       <Routes>
      <Route index element={<Home/>} />
      <Route path='/Shop' element={<Shop />}/>
      <Route path='/CardPage' element={<CardPage />}/>
      <Route path='/Cardlist' element={<CardList />}/>
      <Route path='/login' element={<Login />}/>
-     {/* <Route path='/profile' element={<Profile />}/> */}
+     <Route path='/profile' element={<Profile />}/>
       </Routes>
       <Footer/>
   </userContext.Provider>
