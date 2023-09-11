@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/App.css';
 import Footer from './component/Footer/Footer';
-import Header from './component/header/Header';
+import Header from './component/Header/Header';
 //import Slider from './component/slider/Slider';
 import Home from './pages/home/Home';
 import {Route, Routes} from 'react-router-dom';
@@ -10,7 +10,7 @@ import { createContext,useEffect,useState } from 'react';
 import CardPage from './pages/cart/CardPage';
 import CardList from './pages/cart/CardList';
 import Login from './pages/login/Login';
-import Profile from './pages/Profile/Profile';
+import Profile from './pages/profile/Profile';
 
 export const cartContext = createContext()
 export const userContext = createContext()
