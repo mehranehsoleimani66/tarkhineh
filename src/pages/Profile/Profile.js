@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { cartContext, userContext } from "../../App";
+import { Link } from 'react-router-dom';
 
 
 const Profile = () => {
@@ -20,11 +21,19 @@ const Profile = () => {
     </div>
     <div className='w-[260px] border border-b-2 m-auto'></div>
  <div className='flex flex-col justify-end items-end gap-4 mb-5 mt-5 pr-3'>
-    
+
+ {myCartList.cardFood ? <Link to='/Cardlist'> <div className='flex flex-row-reverse justify-end items-center gap-2'>
+    <img src='images/cart.png' className='rounded-full w-5 h-5' alt='profile image' /> 
+ {myCartList.cardFood.length}سبد خرید
+    </div></Link> : <Link to='/CardPage'> <div className='flex flex-row-reverse justify-end items-center gap-2'>
+    <img src='images/cart.png' className='rounded-full w-5 h-5' alt='profile image' /> 
+    سبد خرید
+    </div></Link>}
+{/*     
 <div className='flex flex-row-reverse justify-end items-center gap-2'>
-    <img src='images/user.png' className='rounded-full w-5 h-5' alt='profile image' /> 
-    <p> پروفایل</p>
-    </div> 
+    <img src='images/cart.png' className='rounded-full w-5 h-5' alt='profile image' /> 
+    <Link to='/cartList'> سبد خرید</Link>
+    </div>  */}
  <div className='flex flex-row-reverse justify-end items-center gap-2'>
     <img src='images/Wallet-2.png' className='rounded-full' alt='profile image' /> 
     <p><span >سفارشات   ({myCartList.cardFood.length})</span>  </p> 

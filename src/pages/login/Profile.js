@@ -20,7 +20,7 @@ const Profile = ({phone}) => {
          
      <div className='flex flex-row-reverse justify-end items-center gap-2'>
          <img src='images/user.png' className='rounded-full w-5 h-5' alt='profile image' /> 
-         <p> پروفایل</p>
+         <p> سبد خرید</p>
          </div> 
       <div className='flex flex-row-reverse justify-end items-center gap-2'>
          <img src='images/Wallet-2.png' className='rounded-full' alt='profile image' /> 

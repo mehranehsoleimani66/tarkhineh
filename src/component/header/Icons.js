@@ -34,26 +34,23 @@ console.log(myUserContext,'uuuuu')
             </Link> }
            
 
-            {myUserContext.user===0  ? <Link  to='/login' className="text-[#417F56] cursor-pointer"> <div className="bg-[#E5F2E9] rounded-lg p-1 text-[#417F56] cursor-pointer flex flex-row justify-center  ">
+            {myUserContext.user.name ? <Link  to='/profile' className="text-[#417F56] cursor-pointer"> <div className="bg-[#E5F2E9] rounded-lg p-1 text-[#417F56] cursor-pointer flex flex-row justify-center  ">
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                 </svg>  وارد شوید :
-                
+                 </svg>  
+                 ی {myUserContext.user.name}  خوش آ مدید 
             </div>
-            </Link>: <Link  to='/profile'  className="text-[#417F56] cursor-pointer"> <div className="bg-[#E5F2E9] rounded-lg p-1 text-[#417F56] cursor-pointer flex flex-row justify-center  ">
+            </Link>
+           : <Link  to='/login'  className="text-[#417F56] cursor-pointer"> <div className="bg-[#E5F2E9] rounded-lg p-1 text-[#417F56] cursor-pointer flex flex-row justify-center  ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ">
               <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>آقای {myUserContext.user.name}  خوش آ مدید  
+               </svg> 
              
-         </div>
-         </Link>
-         }
-            
-          
+               </div>
+         </Link> 
+           }
             <span className="pl-5 text-[#417F56]"> </span>
         </div>
-    
-        
         </>
      );
 }
