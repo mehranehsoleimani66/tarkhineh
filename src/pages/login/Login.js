@@ -42,7 +42,7 @@ code:optCode,
 }
 
     return ( 
-     <Modal open={true} footer={null}> 
+     <Modal open={true} footer={null} closeIcon={false}> 
        
         {step===1 ?<Step1 phone={userPhoneNumber} setPhone={(e)=>setUserPhoneNumber(e)} setStep={()=>setStep(2)} SetOptCode={e=>setOptHandler(e)} />:
         <Step2 
