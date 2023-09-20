@@ -1,11 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { cartContext, userContext } from "../../App";
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import { Button, Modal, message } from 'antd';
+
 
 
 const Profile = () => {
    const myUserContext = useContext(userContext);
    const myCartList = useContext(cartContext);
+   
+
+const LogOut =()=>{
+   myUserContext.setUserHandler({})
+   message.success('خارج شدید')
+}
+
+
+
+   
    
    return(
   
@@ -40,7 +52,7 @@ const Profile = () => {
     </div>
     <div className='flex flex-row-reverse justify-end items-center gap-2'>
     <img src='images/Logout.png' className='rounded-full' alt='profile image' />  
-    <p> خروج</p>   
+    <button onClick={LogOut} > خروج</button>   
     </div>
  </div>
  </div>
