@@ -12,6 +12,7 @@ import CardList from './pages/cart/CardList';
 import Login from './pages/login/Login';
 import Profile from './pages/profile/Profile';
 
+
 export const cartContext = createContext()
 export const userContext = createContext()
 function App() {
@@ -29,6 +30,9 @@ useEffect(()=>{
   
   if (user?.token){
    localStorage.setItem('user',JSON.stringify(user))
+  }
+  else{
+    localStorage.setItem('user',JSON.stringify([]))
   }
 },[user])
 
@@ -90,6 +94,7 @@ useEffect(()=>{
      <Route path='/Cardlist' element={<CardList />}/>
      <Route path='/login' element={<Login />}/>
      <Route path='/profile' element={<Profile />}/>
+   
       </Routes>
       <Footer/>
   </userContext.Provider>
