@@ -1,15 +1,17 @@
 import React, { useContext, useState } from "react";
 import { cartContext, userContext } from "../../App";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Modal, message } from "antd";
 
 const Profile = () => {
   const myUserContext = useContext(userContext);
   const myCartList = useContext(cartContext);
-
+  const navigate = useNavigate();
   const LogOut = () => {
     myUserContext.setUserHandler({});
+    myCartList.buyFoodHandler("");
     message.success("خارج شدید");
+    navigate("/");
   };
 
   return (
