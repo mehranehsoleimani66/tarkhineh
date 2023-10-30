@@ -11,6 +11,7 @@ import CardPage from "./pages/cart/CardPage";
 import CardList from "./pages/cart/CardList";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
+import axios from "axios";
 
 export const cartContext = createContext();
 export const userContext = createContext();
@@ -63,6 +64,8 @@ function App() {
   };
   const setUserHandler = (item) => {
     setUser(item);
+    console.log(item.token, "item.token");
+    axios.defaults.headers.common.Authorization = item.token;
   };
 
   return (
