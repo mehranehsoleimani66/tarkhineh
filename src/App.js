@@ -70,22 +70,20 @@ function App() {
 
   return (
     <div className="App">
-      <React.StrictMode>
-        <cartContext.Provider value={{ cardFood, buyFoodHandler }}>
-          <userContext.Provider value={{ user, setUserHandler }}>
-            <Header />
-            <Routes>
-              <Route index element={<Home />} />
-              <Route path="/Shop" element={<Shop />} />
-              <Route path="/CardPage" element={<CardPage />} />
-              <Route path="/Cardlist" element={<CardList />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/profile" element={<Profile />} />
-            </Routes>
-            <Footer />
-          </userContext.Provider>
-        </cartContext.Provider>
-      </React.StrictMode>
+      <cartContext.Provider value={{ cardFood, buyFoodHandler }}>
+        <userContext.Provider value={{ user, setUserHandler }}>
+          <Header />
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/Shop" element={<Shop />} />
+            <Route path="/CardPage" element={<CardPage />} />
+            <Route path="/Cardlist" element={<CardList />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+          <Footer />
+        </userContext.Provider>
+      </cartContext.Provider>
     </div>
   );
 }
